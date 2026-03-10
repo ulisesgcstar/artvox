@@ -1,0 +1,28 @@
+[general]
+# Velocidad de actualización de las barras
+framerate = 30
+# Número de barras (12 es ideal para una pantalla de 3.5")
+bars = 12
+# Ancho de las barras y espacio entre ellas
+bar_width = 3
+bar_spacing = 1
+
+[input]
+# Método de entrada de audio
+#method = alsa -- temporal
+# Fuente de audio (usaremos el valor por defecto por ahora)
+#source = hw:0,0 -- temporal
+# Cambia esto temporalmente para que el programa abra aunque no haya sonido
+method = fifo
+source = /tmp/cava.fifo
+
+[output]
+# Método de salida visual para la terminal
+method = ncurses
+
+[color]
+# Activamos el gradiente de color para que se vea más profesional
+gradient = 1
+gradient_count = 2
+gradient_color_1 = '#59cc33'
+gradient_color_2 = '#33ccff'
